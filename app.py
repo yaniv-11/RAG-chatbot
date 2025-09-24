@@ -2,7 +2,7 @@
 import os
 import streamlit as st
 from dotenv import load_dotenv
-from PyPDF2 import PdfReader
+from pypdf import PdfReader
 from operator import itemgetter
 
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -118,5 +118,6 @@ footer = """
     built by Yaniv 
 </div>
 """
+
 
 st.markdown(footer, unsafe_allow_html=True)
