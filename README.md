@@ -1,6 +1,8 @@
 Chat with Your PDF: A RAG-Powered Document Q&A Application
 This project is a web application that allows you to have an interactive conversation with any PDF document. You can upload a PDF, and the application uses a powerful Large Language Model (LLM) combined with a Retrieval-Augmented Generation (RAG) pipeline to answer your questions based on the document's content.
 
+APP LINK : https://rag-chatbot-hppmxsr7rqebntzaqwzro9.streamlit.app
+
 The development process and experimentation are detailed in the rag.ipynb notebook, while the final, polished web application is implemented in app.py.
 
 ## ✨ Features
