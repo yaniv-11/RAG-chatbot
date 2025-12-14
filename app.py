@@ -4,8 +4,7 @@ import streamlit as st
 from dotenv import load_dotenv
 from pypdf import PdfReader
 from operator import itemgetter
-
-from langchain_text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEndpointEmbeddings, HuggingFaceEndpoint, ChatHuggingFace
 from langchain.prompts import ChatPromptTemplate
@@ -121,4 +120,5 @@ footer = """
 
 
 st.markdown(footer, unsafe_allow_html=True)
+
 
