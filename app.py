@@ -9,7 +9,7 @@ from langchain_community.vectorstores import FAISS
 from langchain_huggingface import HuggingFaceEndpointEmbeddings, HuggingFaceEndpoint, ChatHuggingFace
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
-from langchain.schema.runnable import Runnable
+from langchain_core.runnables import RunnableParallel
 
 # Load Hugging Face API key
 load_dotenv()
@@ -64,7 +64,7 @@ def build_chain(text):
     parser = StrOutputParser()
 
     # 6. Parallel chain (retriever + question)
-    parallel_chain = Runnable(
+    parallel_chain = RunnableParallel(
         {"context": itemgetter("question") | retriever,
             "question": itemgetter("question")}
     )
@@ -120,6 +120,7 @@ footer = """
 
 
 st.markdown(footer, unsafe_allow_html=True)
+
 
 
 
